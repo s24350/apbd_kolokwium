@@ -76,6 +76,14 @@ namespace WebApplication1.Repository
                 return 2;
             }
 
+            var PaymentToAdd = new Payment
+            {
+                Date = DateTime.Now,
+                IdClient = payment.IdClient,
+                IdSubscription = payment.IdSubscription,
+                Value = payment.Value
+            };
+
             return 0;
         }
     }
